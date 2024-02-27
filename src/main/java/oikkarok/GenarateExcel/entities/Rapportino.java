@@ -9,7 +9,8 @@ import lombok.Getter;
 @Data
 public class Rapportino {
 	
-	public static final String proprietario = "Simone Coraccio";
+	@Getter
+	private static final String proprietario;
 	
 	@Getter
     private static final Map<Progetto, Responsabile> mappaResponsabili = new HashMap<>();
@@ -23,6 +24,9 @@ public class Rapportino {
     
     // Mappa per associare i responsabili ai progetti
     static {
+    	
+    	proprietario = "Simone Coraccio";
+    	
         mappaResponsabili.put(Progetto.NAQ, Responsabile.Autieri);
         mappaResponsabili.put(Progetto.NRB, Responsabile.Costagli);
         mappaResponsabili.put(Progetto.GTM, Responsabile.Caramia);

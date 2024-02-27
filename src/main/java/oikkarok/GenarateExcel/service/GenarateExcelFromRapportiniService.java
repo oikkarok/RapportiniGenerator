@@ -194,7 +194,7 @@ public class GenarateExcelFromRapportiniService {
 		if (isComplete(rapportino)) {
 			rowIndex++;
 			Row row = sheet.createRow(rowIndex);
-			row.createCell(0).setCellValue(Rapportino.proprietario);
+			row.createCell(0).setCellValue(Rapportino.getProprietario());
 			row.createCell(1).setCellValue(rapportino.getData().toString());
 			row.createCell(2).setCellValue(rapportino.getDurataStimata());
 			row.createCell(3).setCellValue(rapportino.getDurataEffettiva());
